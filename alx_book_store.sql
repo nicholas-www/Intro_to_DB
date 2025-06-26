@@ -10,7 +10,7 @@ CREATE TABLE Books (
     book_id INT PRIMARY KEY,
     title VARCHAR(30),
     FOREIGN KEY (author_id) REFERENCES Authors(author_id),
-    price FLOAT,
+    price DOUBLE,
     publication_date DATE
 );
 
@@ -31,5 +31,5 @@ CREATE TABLE Order_Details (
     orderdetailid PRIMARY KEY,
     FOREIGN KEY (order_id) REFERENCES Orders(order_id),
     FOREIGN KEY (book_id) REFERENCES Books(book_id),
-    quantity FLOAT
+    quantity DOUBLE
 );
