@@ -7,7 +7,7 @@ try:
         password='admin',
         database='alx_book_store'
     )
-except:
+except mysql.connector.Error:
     print('An error occured!')
 
 cursor = db.cursor()
